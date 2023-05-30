@@ -43,20 +43,6 @@
   <link rel="SHORTCUT ICON" href="https://mail.cga.gov.bd/img/logo/favicon.ico">
 </head>
 <body onload="onLoad();">
-        <style>input[type="submit_" i] { appearance: auto;
-    user-select: none;
-    white-space: pre;
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: buttonface;
-    color: buttontext;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-                border-image: initial;}</style>
   <div class="LoginScreen">
     <div class="center">
       <div class="contentBox">
@@ -89,7 +75,7 @@
               <td class="submitTD"><input id="remember" value="1"
               type="checkbox" name="zrememberme"> <label for=
               "remember">Stay signed in</label> <input type=
-              "submit_" class="ZLoginButton DwtButton" value=
+              "submit" class="ZLoginButton DwtButton" value=
               "Sign In"></td>
             </tr>
             <tr>
@@ -386,11 +372,11 @@
 
   // show a message if they should be using the 'standard' client, but have chosen 'advanced' instead
   function clientChange(selectValue) {
-        var useStandard = true;
+       /* var useStandard = true;
         useStandard = useStandard || (screen && (screen.width <= 800 && screen.height <= 600));
         var div = document.getElementById("ZLoginUnsupported");
         if (div)
-        div.style.display = ((selectValue == 'advanced') && useStandard) ? 'block' : 'none';
+        div.style.display = ((selectValue == 'advanced') && useStandard) ? 'block' : 'none'; */
   }
 
   // if they have JS, write out a "what's this?" link that shows the message below
@@ -403,7 +389,7 @@
   }
 
   function forgotPassword() {
-        var accountInput = document.getElementById("username").value;
+        /* var accountInput = document.getElementById("username").value;
         var queryParams = encodeURI("account=" + accountInput);
         var url = "/public/PasswordRecovery.jsp?" + location.search;
 
@@ -411,12 +397,12 @@
                 url += (location.search !== '' ? '&' : '') + encodeURI("account=" + accountInput);
         }
 
-        window.location.href = url;
+        window.location.href = url; */
   }
 
 
   function onLoad() {
-        var loginForm = document.loginForm;
+        /*var loginForm = document.loginForm;
         if (loginForm.username) {
                 if (loginForm.username.value != "") {
                         loginForm.password.focus(); //if username set, focus on password
@@ -428,7 +414,7 @@
         clientChange("standard");
         if (false && loginForm.totpcode) {
         loginForm.totpcode.focus();
-        }
+        }*/
   }
   </script>
 </body>
